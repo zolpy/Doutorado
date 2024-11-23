@@ -1,0 +1,23 @@
+clear, clc
+K1=200
+K2=100
+K3=150
+K4=300
+K5=400
+K6=500
+
+BB=K1+K2+K3+K4
+BC=-K2-K3
+BD=-K4
+CB=-K3-K2
+CC=K3+K2+K5
+CD=-K5
+DB=-K4
+DC=-K5
+DD=K6+K4+K5
+
+F=[400;300;500]
+K=[BB BC BD; CB CC CD; DB DC DD]
+U=inv(K)*F
+
+disp(K)
